@@ -6,14 +6,14 @@ main(){
 	
 	for(i=0;i<5;i++){
 		
-		printf("Cantidad de habitantes en la provincia numero %d\n  ", i );
+		printf("Cantidad de habitantes en la provincia numero %d\n  ", i+1 );
 		scanf("%d", &hab);
 		acum= acum + hab;
 		cont= cont +1;
 		
 		
 		if(cont == 1 || hab > max){
-			maxhab= hab;
+			max= hab;
 			contM= cont;
 		}
 		
@@ -27,7 +27,7 @@ main(){
 	prom= acum / cont;
 	
 	printf("****************************\n");
-	printf("  -La provincia numero = %d tiene el mayor numero de habitantes = %d \n", contM, maxhab);
+	printf("  -La provincia numero = %d tiene el mayor numero de habitantes = %d \n", contM, max);
 	printf("  -Porcentaje de provincias con mas de 100 habitantes           = %d \n", porc);
 	printf("  -Promedio de habitantes por provincia = %d\n", prom);
 	printf("  -Total de habitantes                  = %d\n", acum);
